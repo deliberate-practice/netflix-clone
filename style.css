@@ -4,6 +4,10 @@
     margin: 0;
     font-family: 'Karla', sans-serif;
 }
+body{
+    background: #000;
+    color: #FFF;
+}
 img{
     max-width: 100%;
 }
@@ -68,25 +72,25 @@ img{
     font-size: 1.2rem;
     font-weight: 300;
 }
-.content__box form{
+form{
     font-weight: 300;
     margin-top: 1em;
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
-.content__box .form__row{
+.form__row{
     display: flex;
     justify-content: center;
 }
-.content__box .form__row input{
+.form__row input{
     /* flex: .7; */
     font-size: 1rem;
     padding: .7em;
     outline-width: 0;
     
 }
-.content__box .form__row button{
+.form__row button{
     display: flex;
     align-items: center;
     color: #FFF;
@@ -103,6 +107,8 @@ main{
     background: #000;
     color: #FFF;
     font-weight: 300;
+    border-top: 8px solid #222;
+    padding-bottom: 2em;
 }
 .section{
     padding: 1em calc(1em + 3vw);
@@ -142,14 +148,141 @@ main{
 
 
 
+/* Accordion */
+.accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 1em auto;
+    color: #000;
+    /* padding: 45px 45px; */
+  }
+  
+  .accordion .container {
+    position: relative;
+    margin: 10px 10px;
+    background: #303030;
+    padding: 1em 2em;
+  }
+  
+  .accordion .label {
+    position: relative;
+    padding: 10px 0;
+    /* font-size: 30px; */
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+  }
+  
+  .accordion .label::before {
+    content: '+';
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+  }
+  
+  .accordion .content {
+    position: relative;
+    /* background: white; */
+    color: #FFF;
+    height: 0;
+    font-size: 20px;
+    text-align: left;
+    /* width: 780px; */
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .accordion hr {
+    width: 100;
+    margin-left: 0;
+    border: 0 solid transparent;
+    display: none;
+  }
+  
+  .accordion .container.active .content {
+    height: 150px;
+  }
+  
+  .accordion .container.active .label::before {
+    content: '-';
+    font-size: 30px;
+  }
 
+  main > form{
+    padding: 1em;
+  }
+  main > form label{
+    font-size: 1.5em;
+    text-align: center;
+  }
+  main .form__row{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .form__row input{
+    /* width: 70%; */
+    flex: .65;
+  }
+  main .form__row button{
+    flex: .35;
+    align-items: center;
+    display: flex;
+  }
+  
 
+  .faq, .footer{
+    padding: 1em;
+  }
 
+  .footer{
+    padding: 2em;
+  }
+.footer__container{
+    display: flex;
+    margin: 1em 0;
+    justify-content: space-between;
+}
 
+.footer__box{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.footer__col{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: .5em;
+}
+.footer__col a{
+    text-decoration: none;
+    color: #737373;
+}
+.footer p{
+    color: #737373;
+}
 
-
-
-
+@media(min-width: 800px){
+    .footer__box{
+        flex-direction: row;
+        gap: 3em;
+    }
+    .footer__container{
+        justify-content: unset;
+        gap: 3em;
+        margin-top: 2em;
+    }
+    .footer__col{
+        gap: 1em;
+    }
+}
 
 
 
