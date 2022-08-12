@@ -63,7 +63,7 @@ img{
     flex-direction: column;
     gap: 1em;
     z-index: 11;
-    padding: 1em 2em;
+    padding: 1em;
 }
 .content__box h1{
     font-weight: 800;
@@ -88,7 +88,8 @@ form{
     font-size: 1rem;
     padding: .7em;
     outline-width: 0;
-    
+    background-color: #FFF;
+    border: transparent;
 }
 .form__row button{
     display: flex;
@@ -204,7 +205,7 @@ main{
   }
   
   .accordion .container.active .content {
-    height: 150px;
+    height: fit-content;
   }
   
   .accordion .container.active .label::before {
@@ -241,6 +242,7 @@ main{
 
   .footer{
     padding: 2em;
+    border-top: 8px solid #222;
   }
 .footer__container{
     display: flex;
