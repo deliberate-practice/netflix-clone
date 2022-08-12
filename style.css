@@ -204,7 +204,7 @@ main{
   }
   
   .accordion .container.active .content {
-    height: 150px;
+    height: fit-content;
   }
   
   .accordion .container.active .label::before {
